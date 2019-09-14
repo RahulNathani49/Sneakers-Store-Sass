@@ -389,28 +389,124 @@
         position: absolute;
         bottom: 20px;
 
-        .link{
+        .link {
             text-align: center;
             color: white;
             line-height: 40px;
             height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        border: 1px solid white;
-        float: left;
-        margin-right: 10px;
+            width: 40px;
+            border-radius: 50%;
+            border: 1px solid white;
+            float: left;
+            margin-right: 10px;
             transition: .3s;
-            &:hover{
+
+            &:hover {
                 color: #e96188;
                 border-color: #e96188;
                 transition: .3s;
             }
-            
+
         }
 
     }
 
-    
+    .sec8 {
+        padding: 80px 0;
+
+        h4 {
+            font-size: 16px;
+            color: #232323;
+            font-weight: 400;
+        }
+
+        h2 {
+            @include default;
+        }
+    }
+
+    form {
+        input {
+            border: none;
+            border-bottom: 1px solid #5b686b;
+            padding: 10px;
+            outline: none;
+            color: #5b686b;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        textarea {
+            @extend input;
+        }
+
+        a {
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            background-color: #365c9a;
+            border-radius: 30px;
+
+            &:hover {
+                color: white !important;
+            }
+        }
+
+
+    }
+
+    .name,
+    .email,
+    .lname,
+    .phone {
+        width: 50%;
+    }
+
+    footer {
+        background-color: #365c9a;
+        padding: 70px 0;
+        input{
+            background: none;
+            border:none;
+            outline: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        a{
+            padding: 15px 25px;
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            &:hover{
+                color: #000!important;
+            }
+        }
+        h3{
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+.linkk{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    float: left;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: center;
+}
+.tc{
+    text-align: right;
+}
+.fr{
+    float: right;
+}
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .cont h1 {
@@ -477,4 +573,32 @@
         .count {
             padding: 20px;
         }
+
+        .name,
+        .email,
+        .lname,
+        .phone {
+            width: 100%;
+        }
+        .tc{
+            text-align: center!important;
+        }
+        .fr{
+            float: left;
+        }
+        .links{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-nav{
+            li{
+                padding: 15px 0;
+                text-align: center!important;
+            }
+        }
+            .social-links{
+                display: flex;
+                justify-content: center;
+            }
     }

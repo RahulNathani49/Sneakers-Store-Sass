@@ -298,6 +298,81 @@ table tr {
       border-color: #e96188;
       transition: .3s; }
 
+.sec8 {
+  padding: 80px 0; }
+  .sec8 h4 {
+    font-size: 16px;
+    color: #232323;
+    font-weight: 400; }
+  .sec8 h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif; }
+
+form input, form textarea {
+  border: none;
+  border-bottom: 1px solid #5b686b;
+  padding: 10px;
+  outline: none;
+  color: #5b686b;
+  font-size: 16px;
+  font-weight: 400; }
+form a {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  background-color: #365c9a;
+  border-radius: 30px; }
+  form a:hover {
+    color: white !important; }
+
+.name,
+.email,
+.lname,
+.phone {
+  width: 50%; }
+
+footer {
+  background-color: #365c9a;
+  padding: 70px 0; }
+  footer input, footer form textarea, form footer textarea {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 20px; }
+  footer a {
+    padding: 15px 25px;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px; }
+    footer a:hover {
+      color: #000 !important; }
+  footer h3 {
+    font-size: 16px;
+    font-weight: 400; }
+
+.linkk {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  float: left;
+  margin-right: 10px;
+  line-height: 40px;
+  text-align: center; }
+
+.tc {
+  text-align: right; }
+
+.fr {
+  float: right; }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .cont h1 {
     font-size: 40px;
@@ -341,6 +416,31 @@ table tr {
     font-size: 14px; }
 
   .count {
-    padding: 20px; } }
+    padding: 20px; }
+
+  .name,
+  .email,
+  .lname,
+  .phone {
+    width: 100%; }
+
+  .tc {
+    text-align: center !important; }
+
+  .fr {
+    float: left; }
+
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+
+  .navbar-nav li {
+    padding: 15px 0;
+    text-align: center !important; }
+
+  .social-links {
+    display: flex;
+    justify-content: center; } }
 
 /*# sourceMappingURL=style.css.map */
