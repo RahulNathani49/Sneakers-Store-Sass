@@ -226,7 +226,7 @@
             font-weight: 300;
         }
 
-        h4{
+        h4 {
             font-style: normal;
             font-weight: 700;
             font-size: 3rem;
@@ -245,9 +245,173 @@
         }
     }
 
-.count{
-    padding: 20px 120px;
-}
+    .count {
+        padding: 20px 120px;
+    }
+
+    .tabletitle {
+        padding: 70px 0;
+
+        h3 {
+            color: #767676;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: $bigfont;
+            font-weight: 700;
+            color: #232323;
+        }
+    }
+
+    table {
+        thead {
+
+
+            th {
+                padding: 20px 10px !important;
+
+                border-bottom: 1px solid #000 !important;
+
+            }
+        }
+
+        td {
+            padding: 20px 10px !important;
+            border-top: 2px solid #000 !important;
+
+        }
+
+        tr {
+            border-bottom: 2px solid #000;
+
+            &:hover {
+                background-color: #92b5d5 !important;
+            }
+        }
+    }
+
+    .table1-bg {
+        background-image: url(../images/table1-bg.jpg);
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+
+        p {
+            color: #767676;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .table1-bg::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        opacity: .9;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    .table2-bg {
+        background-image: url(../images/table2-bg.jpg);
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+
+    .table2-bg::before {
+        @extend .table1-bg::before;
+    }
+
+    .emp {
+        padding: 70px 0;
+
+        h2 {
+            @include default;
+        }
+
+        h3 {
+            color: #767676;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .image-overlay {
+        h4 {
+            color: #232323;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        h5 {
+            color: #365c9a;
+            font-size: $medium;
+            font-weight: 300;
+        }
+
+        p {
+            color: #767676;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .image-layer {
+        position: relative;
+
+        .img-part {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(transparent, #232323);
+            opacity: 0;
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+                transition: .4s;
+            }
+        }
+    }
+
+    .sociallink {
+        position: absolute;
+        bottom: 20px;
+
+        .link{
+            text-align: center;
+            color: white;
+            line-height: 40px;
+            height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid white;
+        float: left;
+        margin-right: 10px;
+            transition: .3s;
+            &:hover{
+                color: #e96188;
+                border-color: #e96188;
+                transition: .3s;
+            }
+            
+        }
+
+    }
+
+    
+
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .cont h1 {
             font-size: 40px;
@@ -309,7 +473,8 @@
                 font-size: 14px;
             }
         }
-        .count{
+
+        .count {
             padding: 20px;
         }
     }
