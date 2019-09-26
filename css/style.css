@@ -24,6 +24,10 @@ header {
     color: white !important;
     padding: 0 100px; }
 
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  display: block; }
+
 .social-links .link {
   display: inline-block;
   height: 40px;
@@ -107,6 +111,17 @@ header {
     color: #365c9a;
     font-size: 16px;
     font-weight: 400; }
+
+.dropdown-menu {
+  background-color: #365c9a !important;
+  border-radius: 0px !important;
+  border: none !important;
+  text-align: center !important;
+  margin-top: 20px;
+  width: 100%; }
+
+.dropdown-item:hover {
+  background-color: transparent !important; }
 
 .parallax-window {
   position: relative;
@@ -465,6 +480,9 @@ footer {
   .paralax-content {
     padding: 50px 0; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .animation {
+    display: none; }
+
   .sec1 {
     background-image: linear-gradient(#4e84c2, #4e84c2); }
 

@@ -55,6 +55,11 @@
         }
     }
 
+    .dropdown:hover > .dropdown-menu {
+        opacity: 1;
+        display: block;
+    }
+
     .social-links .link {
         display: inline-block;
         height: 40px;
@@ -164,6 +169,19 @@
         }
     }
 
+    .dropdown-menu {
+        background-color: #365c9a !important;
+        border-radius: 0px !important;
+        border: none !important;
+        text-align: center !important;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .dropdown-item:hover {
+        background-color: transparent !important;
+    }
+
     .parallax-window {
         position: relative;
         z-index: 1;
@@ -191,8 +209,8 @@
         line-height: 60px;
         font-size: $medium+3;
         position: relative;
-        
-        &::before{
+
+        &::before {
             content: "";
             height: 100%;
             width: 100%;
@@ -202,7 +220,7 @@
             animation: scale 1s linear infinite;
             border: 1px solid #365c9a;
             border-radius: 50%;
-            
+
         }
     }
 
@@ -506,13 +524,15 @@
             &:hover {
                 color: white !important;
             }
-            &::before{
+
+            &::before {
                 @include anim(#365c9a);
             }
+
             &:hover::before {
                 animation: scale 1s linear infinite;
             }
-            
+
         }
 
 
@@ -552,9 +572,11 @@
             &:hover {
                 color: #000 !important;
             }
-            &::before{
+
+            &::before {
                 @include anim(#fff);
             }
+
             &:hover::before {
                 animation: scale 1s linear infinite;
             }
@@ -630,6 +652,10 @@
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .animation {
+            display: none;
+        }
+
         .sec1 {
             background-image: linear-gradient(#4e84c2, #4e84c2);
         }
@@ -711,4 +737,6 @@
             display: flex;
             justify-content: center;
         }
+
+        .dropdown:hover > .dropdown-menu {}
     }
