@@ -6,13 +6,28 @@
     * {
         font-family: $mainfont;
     }
-body{
-    overflow-x: hidden;
-}
+
+
+    body {
+        overflow-x: hidden;
+    }
+
     @mixin default() {
         font-size: $bigfont;
         font-weight: 400;
         font-family: $mainfont;
+    }
+
+    @mixin anim($col) {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        border: 1px solid $col;
+        transition: .4s;
     }
 
     .nav-title {
@@ -82,9 +97,32 @@ body{
             font-weight: 500;
             color: #333333;
 
+            position: relative;
+
             &:hover {
                 text-decoration: none;
+                box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
             }
+
+            &::before {
+                @include anim(white);
+            }
+
+            &:hover::before {
+                animation: scale 1s linear infinite;
+            }
+        }
+    }
+
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1.4);
+            opacity: 0;
         }
     }
 
@@ -152,7 +190,22 @@ body{
         text-align: center;
         line-height: 60px;
         font-size: $medium+3;
+        position: relative;
+        
+        &::before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scale 1s linear infinite;
+            border: 1px solid #365c9a;
+            border-radius: 50%;
+            
+        }
     }
+
 
     .overlay {
         position: relative;
@@ -448,10 +501,18 @@ body{
             text-decoration: none;
             background-color: #365c9a;
             border-radius: 30px;
+            position: relative;
 
             &:hover {
                 color: white !important;
             }
+            &::before{
+                @include anim(#365c9a);
+            }
+            &:hover::before {
+                animation: scale 1s linear infinite;
+            }
+            
         }
 
 
@@ -467,9 +528,10 @@ body{
     footer {
         background-color: #365c9a;
         padding: 70px 0;
-        input{
+
+        input {
             background: none;
-            border:none;
+            border: none;
             outline: none;
             border-bottom: 1px solid #fff;
             color: #fff;
@@ -478,63 +540,78 @@ body{
             padding: 10px;
             margin-top: 20px;
         }
-        a{
+
+        a {
             padding: 15px 25px;
             background-color: #fff;
             color: black;
             text-decoration: none;
             border-radius: 30px;
-            &:hover{
-                color: #000!important;
+            position: relative;
+
+            &:hover {
+                color: #000 !important;
+            }
+            &::before{
+                @include anim(#fff);
+            }
+            &:hover::before {
+                animation: scale 1s linear infinite;
             }
         }
-        h3{
+
+        h3 {
             font-size: 16px;
             font-weight: 400;
         }
     }
-.linkk{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    float: left;
-    margin-right: 10px;
-    line-height: 40px;
-    text-align: center;
-}
-.tc{
-    text-align: right;
-}
-.fr{
-    float: right;
-}
 
-.animation{
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    animation: animate 20s linear infinite;
-    transition-property: ease;
-    width: 150%;
-   
-    h1{
-        font-size: 10rem;
-        opacity: .2;
-        color: white;
-        
+    .linkk {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        float: left;
+        margin-right: 10px;
+        line-height: 40px;
+        text-align: center;
     }
-}
-@keyframes animate{
-    0%{
+
+    .tc {
+        text-align: right;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    .animation {
+        position: absolute;
+        top: 50%;
         left: 100%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        animation: animate 20s linear infinite;
+        transition-property: ease;
+        width: 150%;
+
+        h1 {
+            font-size: 10rem;
+            opacity: .2;
+            color: white;
+
+        }
     }
-    100%{
-        left: -150%;
+
+    @keyframes animate {
+        0% {
+            left: 100%;
+        }
+
+        100% {
+            left: -150%;
+        }
     }
-}
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .cont h1 {
@@ -608,25 +685,30 @@ body{
         .phone {
             width: 100%;
         }
-        .tc{
-            text-align: center!important;
+
+        .tc {
+            text-align: center !important;
         }
-        .fr{
+
+        .fr {
             float: left;
         }
-        .links{
+
+        .links {
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .navbar-nav{
-            li{
+
+        .navbar-nav {
+            li {
                 padding: 15px 0;
-                text-align: center!important;
+                text-align: center !important;
             }
         }
-            .social-links{
-                display: flex;
-                justify-content: center;
-            }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
     }

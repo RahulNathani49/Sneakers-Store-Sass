@@ -55,10 +55,31 @@ header {
   border-radius: 30px;
   font-size: 13.6px;
   font-weight: 500;
-  color: #333333; }
+  color: #333333;
+  position: relative; }
   .cont a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important; }
+  .cont a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 1px solid white;
+    transition: .4s; }
+  .cont a:hover::before {
+    animation: scale 1s linear infinite; }
 
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(1.4);
+    opacity: 0; } }
 .shoessec {
   padding: 80px 20px; }
   .shoessec .bestseller {
@@ -110,7 +131,18 @@ header {
   margin: auto;
   text-align: center;
   line-height: 60px;
-  font-size: 16.6px; }
+  font-size: 16.6px;
+  position: relative; }
+  .play-btn::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scale 1s linear infinite;
+    border: 1px solid #365c9a;
+    border-radius: 50%; }
 
 .overlay {
   position: relative;
@@ -325,9 +357,22 @@ form a {
   color: white;
   text-decoration: none;
   background-color: #365c9a;
-  border-radius: 30px; }
+  border-radius: 30px;
+  position: relative; }
   form a:hover {
     color: white !important; }
+  form a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 1px solid #365c9a;
+    transition: .4s; }
+  form a:hover::before {
+    animation: scale 1s linear infinite; }
 
 .name,
 .email,
@@ -353,9 +398,22 @@ footer {
     background-color: #fff;
     color: black;
     text-decoration: none;
-    border-radius: 30px; }
+    border-radius: 30px;
+    position: relative; }
     footer a:hover {
       color: #000 !important; }
+    footer a::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      border-radius: 30px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      border: 1px solid #fff;
+      transition: .4s; }
+    footer a:hover::before {
+      animation: scale 1s linear infinite; }
   footer h3 {
     font-size: 16px;
     font-weight: 400; }
