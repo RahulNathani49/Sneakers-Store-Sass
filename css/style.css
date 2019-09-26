@@ -1,6 +1,9 @@
 * {
   font-family: "Poppins", sans-serif; }
 
+body {
+  overflow-x: hidden; }
+
 .nav-title {
   font-size: 2rem;
   font-weight: 400;
@@ -373,6 +376,25 @@ footer {
 .fr {
   float: right; }
 
+.animation {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  animation: animate 20s linear infinite;
+  transition-property: ease;
+  width: 150%; }
+  .animation h1 {
+    font-size: 10rem;
+    opacity: .2;
+    color: white; }
+
+@keyframes animate {
+  0% {
+    left: 100%; }
+  100% {
+    left: -150%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .cont h1 {
     font-size: 40px;
